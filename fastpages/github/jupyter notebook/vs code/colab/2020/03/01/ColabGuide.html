@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="shortcut icon" type="image/x-icon" href="/MlFastAiBlog/assets/icons/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Working with fastpages, GitHub and Colab | Machine learning with Uwe</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Working with fastpages, GitHub and Colab" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A guite how to work with Fastpages, GitHub, Jupyter Notebook and Colab" />
+<meta property="og:description" content="A guite how to work with Fastpages, GitHub, Jupyter Notebook and Colab" />
+<link rel="canonical" href="https://uwesterr.github.io/MlFastAiBlog/fastpages/github/jupyter%20notebook/vs%20code/colab/2020/03/01/ColabGuide.html" />
+<meta property="og:url" content="https://uwesterr.github.io/MlFastAiBlog/fastpages/github/jupyter%20notebook/vs%20code/colab/2020/03/01/ColabGuide.html" />
+<meta property="og:site_name" content="Machine learning with Uwe" />
+<meta property="og:image" content="https://uwesterr.github.io/MlFastAiBlog/images/roboCar2020.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-03-01T00:00:00-06:00" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"https://uwesterr.github.io/MlFastAiBlog/fastpages/github/jupyter%20notebook/vs%20code/colab/2020/03/01/ColabGuide.html"},"description":"A guite how to work with Fastpages, GitHub, Jupyter Notebook and Colab","@type":"BlogPosting","url":"https://uwesterr.github.io/MlFastAiBlog/fastpages/github/jupyter%20notebook/vs%20code/colab/2020/03/01/ColabGuide.html","image":"https://uwesterr.github.io/MlFastAiBlog/images/roboCar2020.jpg","headline":"Working with fastpages, GitHub and Colab","dateModified":"2020-03-01T00:00:00-06:00","datePublished":"2020-03-01T00:00:00-06:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/MlFastAiBlog/assets/main.css">
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://uwesterr.github.io/MlFastAiBlog/feed.xml" title="Machine learning with Uwe" />
+
+  <script>
+  function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+  }
+  window.onload = wrap_img;
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      // add link icon to anchor tags
+      var elem = document.querySelectorAll(".anchor-link")
+      elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+      // remove paragraph tags in rendered toc (happens from notebooks)
+      var toctags = document.querySelectorAll(".toc-entry")
+      toctags.forEach(e => (e.firstElementChild.innerText = e.firstElementChild.innerText.replace('¶', '')))
+    });
+  </script>
+</head><body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/MlFastAiBlog/">Machine learning with Uwe</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/MlFastAiBlog/about/">About Me</a><a class="page-link" href="/MlFastAiBlog/search/">Search</a><a class="page-link" href="/MlFastAiBlog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Working with fastpages, GitHub and Colab</h1><p class="page-description">A guite how to work with Fastpages, GitHub, Jupyter Notebook and Colab</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-03-01T00:00:00-06:00" itemprop="datePublished">
+        Mar 1, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/MlFastAiBlog/categories/#Fastpages">Fastpages</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/MlFastAiBlog/categories/#GitHub">GitHub</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/MlFastAiBlog/categories/#Jupyter Notebook">Jupyter Notebook</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/MlFastAiBlog/categories/#VS Code">VS Code</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/MlFastAiBlog/categories/#Colab">Colab</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#write-a-blog-with-fastpages">Write a blog with Fastpages</a></li>
+<li class="toc-entry toc-h2"><a href="#working-with-notebook-in-colab">Working with notebook in Colab</a></li>
+<li class="toc-entry toc-h2"><a href="#working-with-vs-code">Working with VS Code</a></li>
+</ul><hr>
+<p>The idea is to work with Jupyter Notebook in Colab, the notebook is part of a Fastpages blog and should be edited either in Colab or VS Code</p>
+
+<ul>
+  <li>write a Blog in Fastpages</li>
+  <li>format of Blog is Jupyter Notebook</li>
+  <li>run the Notebook in Colab</li>
+  <li>also edit in VS Code is necessary
+    <ul>
+      <li>use Git to synchronize GitHub repo with VS Code local copy</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="write-a-blog-with-fastpages">
+<a class="anchor" href="#write-a-blog-with-fastpages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Write a blog with Fastpages</h2>
+
+<p>A detailed instruction on how to write Fastpage blogs is given at</p>
+
+<ul>
+  <li><a href="https://github.com/fastai/fastpages#writing-blog-posts-with-jupyter">for juypter notebooks </a></li>
+  <li><a href="https://github.com/fastai/fastpages#writing-blog-posts-with-jupyter">for markdown</a></li>
+</ul>
+
+<h2 id="working-with-notebook-in-colab">
+<a class="anchor" href="#working-with-notebook-in-colab" aria-hidden="true"><span class="octicon octicon-link"></span></a>Working with notebook in Colab</h2>
+
+<p>Once the blog is opened there are buttons</p>
+
+<ul>
+  <li>View on GitHub
+  The Jupyter Notbeook file is opened in the GitHub environment</li>
+  <li>Open in Colab
+  The Jupyter Notbeook file is opened in the Colab environment</li>
+</ul>
+
+<p>In the Colab environment the file can be run with <strong>GPU</strong> support. An intro to <strong>Colab</strong> is given <a href="https://colab.research.google.com/notebooks/welcome.ipynb">here</a></p>
+
+<p>To save the changes chose under <strong>“File”</strong> the option <strong>“Save a copy in GitHub”</strong> as shown below</p>
+
+<hr>
+
+<p><img src="/MlFastAiBlog/images/colabSaveGithubCopy.png" alt="" title="Save copy to GitHub from within Colab"></p>
+
+<hr>
+
+<p>Colab will open a dialog as shown below
+It might be that it asks for your GitHub credentials before opening the dialog</p>
+
+<hr>
+
+<p><img src="/MlFastAiBlog/images/colabAskPermissionGitHub.png" alt="" title="Colab asks for permission to save to GitHub"></p>
+
+<hr>
+
+<h2 id="working-with-vs-code">
+<a class="anchor" href="#working-with-vs-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Working with VS Code</h2>
+
+<p>To work with the Fastpages blog clone the repository as described <a href="https://code.visualstudio.com/docs/editor/versioncontrol#_cloning-a-repository">here</a></p>
+
+<p>It is then easy to synchronize with GitHub, note, don’t forget to pull the repo once you saved a notebook version from Colab to GitHub.</p>
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="uwesterr/MlFastAiBlog"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/MlFastAiBlog/fastpages/github/jupyter%20notebook/vs%20code/colab/2020/03/01/ColabGuide.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/MlFastAiBlog/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Machine learning with Uwe</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Machine learning with Uwe</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list">
+  <li><a href="https://github.com/uwesterr"><svg class="social svg-icon"><use xlink:href="/MlFastAiBlog/assets/minima-social-icons.svg#github"></use></svg> <span class="username">uwesterr</span></a></li><li><a href="https://www.twitter.com/SterrUwe"><svg class="social svg-icon"><use xlink:href="/MlFastAiBlog/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">SterrUwe</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Blogs to make ML understandable and easy to get started</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
