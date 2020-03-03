@@ -464,7 +464,10 @@ Donkey setup complete.
     <strong>Note: </strong>Copying of the data is much faster if the data is zipped to one file.
 </div>
 <div class="highlight"><pre><span></span><span class="nb">cd</span> ~/mycar/data
+<span class="c1"># either compress just one folder</span>
 tar -czf tub_xx_yyyy_mm_dd.tar.gz tub_xx_yyyy_mm_dd
+<span class="c1"># or all folders starting with "tub"</span>
+tar -czf trainingsData2020_03-01.tar.gz tub*
 </pre></div>
 <p>This will create a tub_xx_yyyy_mm_dd.tar.gz file under ~/mycar/data</p>
 
