@@ -112,7 +112,11 @@
     <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#write-a-blog-with-fastpages">Write a blog with Fastpages</a></li>
 <li class="toc-entry toc-h2"><a href="#working-with-notebook-in-colab">Working with notebook in Colab</a></li>
-<li class="toc-entry toc-h2"><a href="#working-with-vs-code">Working with VS Code</a></li>
+<li class="toc-entry toc-h2"><a href="#working-with-vs-code">Working with VS Code</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#avoid-conflicting-versions">Avoid conflicting versions</a></li>
+</ul>
+</li>
 </ul><hr>
 <p>The idea is to work with Jupyter Notebook in Colab, the notebook is part of a Fastpages blog and should be edited either in Colab or VS Code</p>
 
@@ -174,6 +178,22 @@ It might be that it asks for your GitHub credentials before opening the dialog</
 <p>To work with the Fastpages blog clone the repository as described <a href="https://code.visualstudio.com/docs/editor/versioncontrol#_cloning-a-repository">here</a></p>
 
 <p>It is then easy to synchronize with GitHub, note, don’t forget to pull the repo once you saved a notebook version from Colab to GitHub.</p>
+
+<h3 id="avoid-conflicting-versions">
+<a class="anchor" href="#avoid-conflicting-versions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Avoid conflicting versions</h3>
+
+<p>If you do the following</p>
+
+<ul>
+  <li>Change file in Colab</li>
+  <li>Save to GitHub</li>
+  <li>Change same file in VS</li>
+  <li>Try to push</li>
+</ul>
+
+<p>You will have *conflicts in the file** and need command line magic to solve the issue. I ended up setting the whole blog up from scratch.</p>
+
+<p>Better: use <strong>Git: Snyc</strong> which does a <strong>Git: Pull</strong> first and then a <strong>Git: Push</strong></p>
 
   </div><!-- from https://github.com/utterance/utterances -->
 <script src="https://utteranc.es/client.js"
