@@ -58,3 +58,16 @@ It might be that it asks for your GitHub credentials before opening the dialog
 To work with the Fastpages blog clone the repository as described [here](https://code.visualstudio.com/docs/editor/versioncontrol#_cloning-a-repository) 
 
 It is then easy to synchronize with GitHub, note, don't forget to pull the repo once you saved a notebook version from Colab to GitHub. 
+
+### Avoid conflicting versions
+
+If you do the following
+
+- Change file in Colab
+- Save to GitHub
+- Change same file in VS
+- Try to push
+
+You will have *conflicts in the file** and need command line magic to solve the issue. I ended up setting the whole blog up from scratch.
+
+Better: use **Git: Snyc** which does a **Git: Pull** first and then a **Git: Push**
