@@ -9,7 +9,7 @@ search: exclude
 A blog to make help to understand machine learning and to get started doing right away.
 
 
-<img src="images/roboCar2020.jpg" alt="drawing" width="300"/>
+<img src="images/trainDonkey.png" alt="drawing" width="300"/>
 
 
 # Posts
