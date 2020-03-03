@@ -2,7 +2,7 @@
 toc: true
 description: A guite how to work with Fastpages, GitHub, Jupyter Notebook and Colab
 categories: [Fastpages,  GitHub, Jupyter Notebook , VS Code, Colab]
-image: images/roboCar2020.jpg
+image: images/vsCodeSreenShot.png
 comments: true
 ---
 # Working with fastpages, GitHub and Colab
