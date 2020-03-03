@@ -3,7 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-search: include
+search: exclude
 ---
 
 A blog to make help to understand machine learning and to get started doing right away.
