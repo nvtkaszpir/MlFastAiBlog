@@ -31,8 +31,14 @@ Once the blog is opened there are buttons
 - View on GitHub
     The Jupyter Notbeook file is opened in the GitHub environment
 - Open in Colab
-    The Jupyter Notbeook file is opened in the Colab environment
+    The Jupyter Notbeook file is opened in the Colab environment [^colabNote]
 
+[^colabNote]: Anybody can open a copy of any github-hosted notebook within Colab just add for markup 
+    `{ [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb)}`  
+    or for html  
+    `{<a href="https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb">
+    <img src="https://colab.research.google.com/assets/colab-badge.   svg" alt="Open In Colab"/>
+    </a>}`
 
 In the Colab environment the file can be run with **GPU** support. An intro to **Colab** is given [here](https://colab.research.google.com/notebooks/welcome.ipynb) 
 
