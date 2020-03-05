@@ -127,15 +127,13 @@
 <li class="toc-entry toc-h2"><a href="#Supply-Data">Supply Data¶</a></li>
 <li class="toc-entry toc-h2"><a href="#Supply-own-data">Supply own data¶</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#Upload-Data-from-raspi-to-your-machine">Upload Data from raspi to your machine¶</a></li>
-<li class="toc-entry toc-h3"><a href="#Copy-the-following-code-and-run-on-pi">Copy the following code and run on pi¶</a></li>
-<li class="toc-entry toc-h3"><a href="#Copy-the-tub-to-your-local-pc">Copy the tub to your local pc¶</a></li>
-<li class="toc-entry toc-h3"><a href="#Define-your-tub-name-here">Define your tub name here¶</a></li>
+<li class="toc-entry toc-h3"><a href="#Zip-data-on-raspi">Zip data on raspi¶</a></li>
+<li class="toc-entry toc-h3"><a href="#Copy-the-zipped-tub-to-your-local-PC">Copy the zipped tub to your local PC¶</a></li>
 <li class="toc-entry toc-h3"><a href="#Upload-the-tub-from-Google-Drive">Upload the tub from Google Drive¶</a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#Check-quality-of-data">Check quality of data¶</a></li>
-<li class="toc-entry toc-h2"><a href="#If-you-don't-have-own-data">If you don&#39;t have own data¶</a></li>
+<li class="toc-entry toc-h2"><a href="#Supply-GitHub-hosted-data">Supply GitHub hosted data¶</a></li>
 <li class="toc-entry toc-h2"><a href="#Upload-local-files">Upload local files¶</a>
 <ul>
 <li class="toc-entry toc-h4"><a href="#Get-myconfig.py">Get myconfig.py¶</a></li>
@@ -482,23 +480,20 @@ Donkey setup complete.
 <h2 id="Supply-own-data">
 <a class="anchor" href="#Supply-own-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Supply own data<a class="anchor-link" href="#Supply-own-data">¶</a>
 </h2>
-<p>If you have own data proceed here, if you want to use data which were made available via GitHub please continue to <a href="#own_data">section</a></p>
-<blockquote>
-<p>If you don't have own data</p>
-</blockquote>
-<h3 id="Upload-Data-from-raspi-to-your-machine">
-<a class="anchor" href="#Upload-Data-from-raspi-to-your-machine" aria-hidden="true"><span class="octicon octicon-link"></span></a>Upload Data from raspi to your machine<a class="anchor-link" href="#Upload-Data-from-raspi-to-your-machine">¶</a>
-</h3>
+<p>If you have own data proceed here, if you want to use data which were made available via GitHub please continue to <a href="#own_data">section</a> <strong>Supply GitHub hosted data</strong></p>
+<p>In <a href="https://colab.research.google.com/github/uwesterr/MlFastAiBlog/blob/master/_notebooks/2020-03-01-TrainDonkeyCar.ipynb#scrollTo=4CchMtMI6gfd&amp;line=1&amp;uniqifier=1">section</a></p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Copy-the-following-code-and-run-on-pi">
-<a class="anchor" href="#Copy-the-following-code-and-run-on-pi" aria-hidden="true"><span class="octicon octicon-link"></span></a>Copy the following code and run on pi<a class="anchor-link" href="#Copy-the-following-code-and-run-on-pi">¶</a>
+<h3 id="Zip-data-on-raspi">
+<a class="anchor" href="#Zip-data-on-raspi" aria-hidden="true"><span class="octicon octicon-link"></span></a>Zip data on raspi<a class="anchor-link" href="#Zip-data-on-raspi">¶</a>
 </h3>
-<p></p>
+<p>Copy the following code and run on pi 
+</p>
 <div class="flash">
     <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 01-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 01-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg>
     <strong>Note: </strong>Copying of the data is much faster if the data is zipped to one file.
@@ -510,8 +505,8 @@ tar -czf tub_xx_yyyy_mm_dd.tar.gz tub_xx_yyyy_mm_dd
 tar -czf trainingsData2020_03-01.tar.gz tub*
 </pre></div>
 <p>This will create a tub_xx_yyyy_mm_dd.tar.gz file under ~/mycar/data</p>
-<h3 id="Copy-the-tub-to-your-local-pc">
-<a class="anchor" href="#Copy-the-tub-to-your-local-pc" aria-hidden="true"><span class="octicon octicon-link"></span></a>Copy the tub to your local pc<a class="anchor-link" href="#Copy-the-tub-to-your-local-pc">¶</a>
+<h3 id="Copy-the-zipped-tub-to-your-local-PC">
+<a class="anchor" href="#Copy-the-zipped-tub-to-your-local-PC" aria-hidden="true"><span class="octicon octicon-link"></span></a>Copy the zipped tub to your local PC<a class="anchor-link" href="#Copy-the-zipped-tub-to-your-local-PC">¶</a>
 </h3>
 <p>Run this on your local pc if you are using linux/mac</p>
 
@@ -526,9 +521,8 @@ get tub_xx_yyyy_mm_dd.tar.gz</code></pre>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Define-your-tub-name-here">
-<a class="anchor" href="#Define-your-tub-name-here" aria-hidden="true"><span class="octicon octicon-link"></span></a>Define your tub name here<a class="anchor-link" href="#Define-your-tub-name-here">¶</a>
-</h3>
+<p>Define your tub name here</p>
+
 </div>
 </div>
 </div>
@@ -686,6 +680,14 @@ Mounted at /content/drive
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Lets look at one image to see we got valid data</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -721,7 +723,7 @@ Mounted at /content/drive
 
 
 <div class="output_jpeg output_subarea output_execute_result">
-<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a%0AHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy%0AMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAB4AKADASIA%0AAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA%0AAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3%0AODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm%0Ap6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA%0AAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx%0ABhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK%0AU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3%0AuLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCoFVeg%0A5PQVct7Q7t78t6elNt4W3b2GT29q1E8pYG3FhLkbcDjHfP6VJKFiiwOMVowBQBnB+tZfmntUscxH%0ATrSuWkdHbKrkZNa9u8CYGdx9q5a1Z3IBPHpXU6bZSSsoQdsn6UIGaMc7EYSMD681YUTycF2+gpj3%0AOl6ehM91EWHVVbcfyFFr4isLmdIYFl3OwAyoA9PWmIl+xMTyD+NOFgxB4A+tYeq+LLi2mlhgijUq%0AxXc2SeKw28X6sRj7UB9I1/woY7HXXOmylSQua8tsM2viS3ibgJdbD9N+DXSWHiDULjV7JJbyUo9x%0AGpXdgEFgOlY/iOD7J4lunUYIuDIPxOaBG9rA8jWFJ4MkSv8A0/pXS6DOhwM9Riud8agQ3djOv3XR%0A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%0AmQkD0HWiihENn//Z%0A">
+<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a%0AHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy%0AMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAB4AKADASIA%0AAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA%0AAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3%0AODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm%0Ap6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA%0AAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx%0ABhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK%0AU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3%0AuLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDUiTJr%0AQgj5FVIRWnarlhSGdBo8G5l4rsUUKgA7Cue0VQHSuj6CqexPU57X3+Yj0Fcdc8HOc+1dNrcuZGrl%0AZ2BJoYokA5ar91DjTbFv7zn+dZ4bDVoa5qNtpfh7S7i5LBSzYCrknmkhs7DT4cXGMela8/yrwK82%0At/irpKXp2abqLrxyFjB/ItXo1ndx6lp8V1GkiJKm4LKu1h9RTA5PXSDrmnuRwHGf++hVPxrocVpM%0Al7bqFjmfDoOgb1H1q94mAjurR+watLxpGsmiIXYIqzoSx6AHIz+tFwscFaRtDKZ/KLIq88HH4kV0%0AWmyh0WORgJSMgEjke3rivN/FWqRWuq2UNhfwyyb2Tat2kQJHILEnGOOnH1rA1bxJqNvfia21Z0uQ%0A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%0A0P/Z%0A">
 </div>
 
 </div>
@@ -798,8 +800,8 @@ saving image to: tubVaihingenIIICleaned200126_hist_user_angle.png
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="If-you-don't-have-own-data">
-<a class="anchor" href="#If-you-don't-have-own-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>If you don't have own data<a class="anchor-link" href="#If-you-don't-have-own-data">¶</a>
+<h2 id="Supply-GitHub-hosted-data">
+<a class="anchor" href="#Supply-GitHub-hosted-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Supply GitHub hosted data<a class="anchor-link" href="#Supply-GitHub-hosted-data">¶</a>
 </h2>
 <p><a id="own_data"></a>
 If you don't have own training data you might want to use an example data set
